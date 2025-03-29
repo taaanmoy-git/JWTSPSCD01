@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4CAF50, #81C784);
+            color: white;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 2.5em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+        .button {
+            background-color: #FF5722;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+        .button:hover {
+            background-color: #E64A19;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Index Page</h1>
+    <button class="button" onclick="window.location.href='/home/test';">Go to Test Page</button>
+    <button class="button" onclick="window.location.href='/logout';">Log Out</button>
+    <button class="button" onclick="window.location.href='/home/user';">View User Data</button>
+</body>
+</html>
