@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6A82FB, #FC5C7D);
+            color: white;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 2.5em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .logout-btn {
+            background-color: #FF5722;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease-in-out;
+        }
+        .logout-btn:hover {
+            background-color: #E64A19;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Home Test Page</h1>
+    <button class="logout-btn" onclick="confirmLogout()">Log Out</button>
+
+    <script>
+        function confirmLogout() {
+            // Show confirmation dialog
+            const userConfirmed = confirm("Are you sure you want to log out?");
+            if (userConfirmed) {
+                // Redirect to logout endpoint if the user confirms
+                window.location.href = '/logout';
+            } else {
+                // Stay on the current page (no action needed)
+                console.log("User chose to stay on the page.");
+            }
+        }
+    </script>
+</body>
+</html>
