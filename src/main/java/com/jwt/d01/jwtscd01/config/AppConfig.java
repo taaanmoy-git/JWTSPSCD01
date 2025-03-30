@@ -1,4 +1,4 @@
-package com.jwt.d01.jwtscd01.securityconfig;
+package com.jwt.d01.jwtscd01.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,15 +12,21 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 @Configuration
-public class MyConfig {
+public class AppConfig {
 	
     @Bean
     public UserDetailsService userDetailsService() {
-        UserDetails userDetails = User.builder().
-                username("tanmoy")
-                .password(passwordEncoder().encode("tanmoy")).roles("admin").
-                build();
-        return new InMemoryUserDetailsManager(userDetails);
+        UserDetails user1 = User.builder()
+                .username("tanmoy")
+                .password(passwordEncoder().encode("tanmoy"))
+                .roles("admin")
+                .build();
+        UserDetails user2 = User.builder()
+                .username("admin")
+                .password(passwordEncoder().encode("admin"))
+                .roles("admin")
+                .build();
+        return new InMemoryUserDetailsManager(user1,user2);
     }
 
     @Bean

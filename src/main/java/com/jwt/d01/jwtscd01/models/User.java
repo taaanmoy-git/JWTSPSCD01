@@ -1,4 +1,4 @@
-package com.jwt.d01.jwtscd01.entity;
+package com.jwt.d01.jwtscd01.models;
 
 public class User {
 	
